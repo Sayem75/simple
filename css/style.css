@@ -1,0 +1,665 @@
+/* -------------------------------
+    Univarsal selector 
+---------------------------------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --------------------------
+    variable 
+------------------------------- */
+
+:root {
+
+/* -----------------------
+    colors 
+--------------------------- */
+ 
+--primary: #29CA8E;
+--seconday: #3F51B5;
+--dark: #747474;
+--pure: #ffffff;
+--heaven: #D5D5D5;
+--solid:#000000d2;
+    
+
+/* ------------------------
+    fonts
+---------------------------- */
+
+--regular: regular, sans-serif;
+--bold: bold, sans-serif;
+--light: light, sans-serif;
+--medium: medium, sans-serif;
+--black: black, sans-serif;
+
+}
+/* ------------------------------
+    font-family
+--------------------------------- */
+
+@font-face {
+    font-family: regular;
+    src: url(/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: medium;
+    src: url(/fonts/Roboto-Medium.ttf);
+}
+@font-face {
+    font-family: light;
+    src: url(/fonts/Roboto-Light.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(/fonts/Roboto-bold.ttf);
+}
+@font-face {
+    font-family: black;
+    src: url(/fonts/Roboto-Black.ttf);
+}
+
+/*----------------------
+    global selector 
+----------------------------- */
+.container {
+    max-width: 1145px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0px 15px;
+}
+.flex {
+    display: flex;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content:space-between;
+}
+.align-center {
+    align-items: center;
+}
+.flex1 {
+    flex: 1;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li,a {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+p {
+    font-family: var(--light)
+}
+h1,h2,h3,h4 {
+    font-family: var(--bold)
+}
+
+/* ----------------
+    btn 
+----------------- */
+.btn {
+    border: none;
+    padding: 18px 40px;
+    border-radius: 30px;
+    font-size: 1.02rem;
+    color: var(--pure);
+    font-weight: normal;
+    transition: all 0.5s ease;
+    outline: none;
+}
+.btn.btn-primary {
+    border: 1px solid var(--pure);
+    background-color: transparent;
+}
+.btn.btn-primary:hover {
+    background-color: var(--pure);
+    color: var(--dark);
+}
+.btn.btn-secondary {
+    background-color: var(--pure);
+    color: var(--dark);
+}
+.btn.btn-secondary:hover {
+    background-color: var(--seconday);
+    color: var(--pure);
+}
+section {
+    padding: 8rem 0rem;
+}
+.section-heading {
+    font-family: var(--regular);
+    color: var(--solid);
+    text-align: center;
+}
+.section-heading h2 {
+    font-size: 2rem;
+    padding-bottom: 20px;
+}
+.section-heading p {
+    padding-bottom: 6rem;
+}
+/* ---------------------------
+    header 
+------------------------------- */
+
+
+header {
+    border-top: 4px solid var(--primary);
+    position: sticky;
+    top: 0;
+    background-color: var(--pure);
+    overflow:hidden;
+    z-index: 999;
+
+}
+
+header .nav {
+    color: var(--dark);
+}
+.nav .branding{
+     font-family: var(--bold);
+     font-size: 1rem;
+     color: var(--solid);
+     text-transform: uppercase;
+}
+.nav .menu ul li a {
+     font-family: var(--light);
+     font-size: 1rem;
+     color: var(--dark);
+     font-weight: 300;
+     letter-spacing: 1px;
+     padding: 23px;
+}
+.nav .menu ul li a:hover:not(.active){
+     background-color: var(--primary);
+     color: var(--pure);
+}
+.nav .menu ul li .active {
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.nav .call {
+    font-family: var(--light);
+    font-size: 1rem;
+    padding: 20px 10px;
+    transition: 0.5s ease;
+
+}
+.nav .call span {
+    margin-right: 10px;
+    background-color: var(--primary);
+    color: var(--pure);
+    font-size: 0.8rem;
+    width: 25px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 25px;
+}
+    
+.nav .call:hover {
+    background-color: var(--primary);
+    color: var(--pure);
+    
+}
+
+/* --------------------------
+    hero 
+----------------------------- */
+
+.hero {
+    background:linear-gradient( rgba(0,0,0,0), rgba(0,0,0, 0.4)),
+    url(../images/slider.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 95vh;
+    position: relative;
+}
+.hero-heading  {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    padding-left: 15px;
+}
+.hero-heading h1 {
+    color: var(--pure);
+    font-size: 2.5rem;
+    padding-bottom: 2.3rem;
+}
+.hero-heading p {
+    color: var(--pure);
+    padding-bottom: 2rem;
+    line-height: 25px;
+    
+}
+.about .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.about .container .about-container {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 24px #ddd;
+}
+.about .container .about-container span {
+    background-color: var(--seconday);
+    color: var(--pure);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    padding: 10px;
+    font-family: medium;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 40px;
+}
+ .container .about-container h2 {
+    padding: 25px 0px;
+    text-transform: capitalize;
+    font-family: var(--regular);
+    color: var(--solid);
+    font-size: 1.2rem;
+
+}
+ .container .about-container p {
+    text-transform: capitalize;
+    font-family: var(--regular);
+    line-height: 25px;
+    font-size: 0.9rem;
+    color: var(--dark);
+    
+}
+
+/* ------------------------
+    signup 
+----------------------------- */
+
+.signup .container {
+    color: var(--solid);
+
+}
+.signup .container .signup-info h2{
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--solid);
+
+}
+.signup .container .signup-info .inner-signup-info {
+    display: flex;
+    flex-direction: column;
+}
+.signup .container .signup-info .inner-signup-info .sign-info-block{
+    display: flex;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+.sign-info-block div {
+    display: flex;
+    flex-direction: column;
+}
+.signup .container .signup-info .inner-signup-info .sign-info-block span {
+    background-color: var(--primary);
+    color: var(--pure);
+    font-size: 1.2rem;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 25px;
+    line-height: 20px;
+    padding: 15px;
+}
+.signup .signup-form {
+    background-color: var(--solid);
+    text-align: center;
+    color: var(--pure);
+    font-family: var(--regular);
+    margin-left: 20px;
+    padding: 90px 0px;
+    border-radius: 50%;
+    
+}
+.signup .signup-form .form-heading{
+  padding: 2.1rem 0rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.signup .signup-form form{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 100px;
+}
+.signup .signup-form form input[type='text'], .signup .signup-form form input[type='email'], .signup .signup-form form input[type='password']{
+  border: none;
+  border-bottom: 1px solid var(--heaven);
+  padding: 14px 8px;
+  margin-bottom: 10px;
+  outline: none;
+  background-color: transparent;
+  
+}
+.signup .signup-form form input[type='submit'] {
+    width: 200px;
+    align-self: center;
+    margin-top: 15px;
+}
+.teacher .container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.teacher .container .teacher-container span img {
+    width: 100%;
+}
+.teacher .container .teacher-container h2 {
+    color: var(--solid);
+    font-size: 1.4rem;
+    padding-top: 1.2rem;
+    
+}
+.teacher .container .teacher-container p {
+    padding-bottom: 1.2rem;
+    font-size: 0.9rem;
+
+}
+.teacher .container .teacher-container hr{
+    border-color: #f5f5f54d;
+    margin-bottom: 1.4rem;
+
+}
+.teacher .container .teacher-container .teacher-id ul li a{
+    color: var(--solid);
+    font-size: 0.9rem;
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: 0.5s ease;
+    
+
+}
+.teacher .container .teacher-container .teacher-id ul li a:hover{
+    background-color: var(--primary);
+    color: var(--pure);
+    
+
+}
+.course .container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+}
+.course-container .course-img {
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+.course-container .course-img img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+.course-container .course-img .course-schdule {
+    display: flex;
+
+}
+.course-container .course-img .course-schdule .date{
+    margin-right: 20px;
+
+}
+.course-container .course-img .course-schdule {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: var(--pure);
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #000, 4px 4px 4px #000, 4px 4px 4px #000;
+
+}
+.course-container:hover .course-img img {
+    transform: scale(1.2,1.2)
+}
+.course-container .course-img .course-schdule p {
+    margin-left: 5px;
+}
+
+.course-container .course-footer {
+   color: var(--solid);
+}
+.course-container .course-footer h2{
+   padding: 20px 0px 0px 0px;
+   font-size: 1.5rem;
+}
+.course-container .course-footer p{
+   padding-bottom: 20px;
+   font-size:0.9rem;
+}
+.course-container .course-footer hr{
+    border-color: #f5f5f54d;
+    margin-bottom: 1.4rem;
+}
+.course-container .course-footer .course-teacher {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.course-container .course-footer .course-teacher .teacher-img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.course-container .course-footer .course-teacher .teacher-img > p {
+    line-height: 50px;
+    font-weight: bold;
+}
+.course-container .course-footer .course-teacher > span {
+    background-color: var(--seconday);
+    text-align: center;
+    padding: 8px 16px;
+    color: var(--pure);
+    font-weight: normal;
+    font-size: 0.9rem;
+    cursor: pointer;
+    
+}
+
+/* -----------------------------
+    reviews
+------------------------------------ */
+
+.reviews .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--dark);
+    grid-column-gap: 30px;
+}
+
+.reviews .container .student{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.reviews .container .student .student-img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+.reviews .container .student .student-info h2{
+   color: var(--solid);
+   font-size: 1.3rem;
+}
+.reviews .container .reviews-text{
+   font-size: 0.9rem;
+   line-height: 25px;
+   padding-bottom: 20px;
+}
+.reviews .container .reviews-text .star {
+    font-size: 0.8rem;
+    color: var(--seconday);
+}
+
+/* ------------------------
+    contact 
+------------------------------- */
+
+.contact {
+    background-color: var(--seconday);
+    color: var(--pure);
+}
+.contact .container .contact-form .contact-heading  h2 {
+    font-size: 2rem;
+}
+.contact .container .contact-form .contact-heading  p {
+    padding-bottom: 25px;
+    
+}
+.contact .container .contact-form{
+    padding: 20px;
+    
+}
+.contact .container .contact-form form {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.contact .contact-form form input[type='text'], .contact .contact-form form input[type='email'], textarea{
+   padding: 15px 20px;
+    border: none;
+    outline: none;
+    margin-bottom: 1.1rem;
+    color: var(--dark);
+    letter-spacing: 1px;
+    font-family: var(--light);
+    border-radius: 6px;
+
+}
+.contact .contact-form form input[type='submit']{
+    border: 1px solid transparent;
+    width: 200px;
+}
+.contact .contact-form form input[type='submit']:hover {
+    border: 1px solid var(--pure);
+}
+.contact .contact-form form textarea {
+    resize: vertical;
+    height: 150px;
+}
+.contact .contact-img-container img {
+    width: 100%;
+    object-fit: cover;
+    padding-left: 20px;
+}
+.footer {
+    background: var(--solid);
+    color: var(--pure);
+}
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+}
+.footer .container p {
+    color: var(--dark);
+}
+.footer .container .heading h2 {
+    font-size: 1.4rem;
+    padding-bottom: 2rem;
+}
+.footer .container p {
+    font-size: 0.9rem;
+    padding-bottom: 1.4rem;
+}
+.footer .headquarter address p {
+    text-transform: capitalize;
+    font-style: normal;
+}
+.footer .container ul li a {
+    color: var(--pure);
+    font-size: 0.9rem;
+}
+.footer .headquarter .head-social ul li a {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 30px;
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+.footer .headquarter .head-social ul li a:hover {
+    background-color: var(--primary);
+    color: var(--pure);
+}
+.footer .container .contact-in .call-email p:first-child {
+    padding-bottom: 0.4rem;
+}
+.quick-links .links ul li a {
+    margin-right: 2rem;
+    line-height: 25px;
+    color: var(--dark);
+    font-family: var(--regular);
+}
+.quick-links .links ul li a:hover {
+    color: var(--primary);
+}
+.footer .news-signup form {
+    display: flex;
+    flex-direction: column;
+}
+.footer .news-signup form input[type='email'] {
+    padding: 15px;
+    margin: 10px 0px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--dark);
+    
+}
+.footer .news-signup form input[type='email']:focus {
+    border-bottom: 1px solid var(--seconday);
+}
+.footer .news-signup form input[type='submit'] {
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid var(--pure);
+    margin: 2rem 0rem;
+}
+.footer .news-signup form input[type='submit']:hover {
+    background-color: var(--seconday);
+    color: var(--pure);
+    border: 1px solid transparent;
+
+}
+.footer .news-signup form p {
+    font-size: 0.8rem;
+}
